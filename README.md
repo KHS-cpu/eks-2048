@@ -17,14 +17,14 @@ This project isn’t just about playing a game — it’s about **learning how t
 > 🔧 This project simulates how you'd expose real microservices or web apps in production with zero node management.
 
 ---
+## 🗺️ Architecture Diagram
+This is the diagarm for AWS Cloud Architecture for project.(Codes used to build Terraform) <br>
 
-## 🧠 Core Concepts Demonstrated
+![AWS-EKS](images/eks-game.jpg)
 
-✅ **Amazon EKS** – A fully managed Kubernetes cluster on AWS  
-✅ **AWS Fargate** – Run pods without managing EC2 infrastructure  
-✅ **AWS Load Balancer Controller** – Auto-creates and manages ALBs for Kubernetes Ingress  
-✅ **Kubernetes Ingress** – Smart HTTP routing to your app  
-✅ **2048 Game App** – A sample frontend to test end-to-end connectivity
+This is the diagarm for Kubernetes that is deployed in EKS. (Codes used to build Terraform) <br>
+
+![Kubernetes](images/EKS-Kubernetes-Diagram.png)
 
 ---
 
@@ -48,6 +48,7 @@ After deployment, the 2048 game is available at the external ALB endpoint provid
 
 > Working 2048 game accessible in the browser.
 
+![2048-Game](images/2048-Game.png)
 
 ---
 
@@ -75,6 +76,8 @@ After deployment, the 2048 game is available at the external ALB endpoint provid
    terraform apply
    ```
 4. **The Load Balancer is created automatically via AWS load balancer controller which translates Kubernetes Ingress/Service into AWS ALB/NLB config**
+
+![DNS](images/DNS-name-from-ALB.png)
 
 ---
 
